@@ -26,8 +26,14 @@ public class listMain {
 			
 			for(i=0;i<height;i++) {
 				for(j=0;j<width;j++) {
-					hex = "#"+Integer.toHexString(img.getRGB(j,i)).substring(2);
-					colours.add(hex);
+					try {
+						hex = "#"+Integer.toHexString(img.getRGB(j,i)).substring(2);
+						colours.add(hex);
+					}
+					
+					catch (Exception a) {
+						continue;
+					}
 				}
 			}
 			
